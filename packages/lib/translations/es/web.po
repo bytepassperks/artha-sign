@@ -49,6 +49,10 @@ msgstr "\"{documentName}\" fue firmado por todos los firmantes"
 msgid "\"{placeholderEmail}\" on behalf of \"Team Name\" has invited you to sign \"example document\"."
 msgstr "\"{placeholderEmail}\" en nombre de \"Team Name\" te ha invitado a firmar \"example document\"."
 
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+msgid "\"{title}\" has been successfully cancelled"
+msgstr ""
+
 #: apps/remix/app/components/dialogs/envelope-delete-dialog.tsx
 msgid "\"{title}\" has been successfully deleted"
 msgstr "\"{title}\" ha sido eliminado con éxito"
@@ -101,6 +105,17 @@ msgstr "{0, plural, one {# carácter restante} other {# caracteres restantes}}"
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.branding.tsx
 msgid "{0, plural, one {# CSS rule was dropped during sanitisation.} other {# CSS rules were dropped during sanitisation.}}"
 msgstr "{0, plural, one {Se descartó # regla CSS durante la sanitización.} other {Se descartaron # reglas CSS durante la sanitización.}}"
+
+#. placeholder {0}: result.cancelledCount
+#. placeholder {1}: result.failedIds.length
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "{0, plural, one {# document cancelled.} other {# documents cancelled.}} {1, plural, one {# document could not be cancelled.} other {# documents could not be cancelled.}}"
+msgstr ""
+
+#. placeholder {0}: result.cancelledCount
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "{0, plural, one {# document has been cancelled.} other {# documents have been cancelled.}}"
+msgstr ""
 
 #. placeholder {0}: folder._count.documents
 #: apps/remix/app/components/general/folder/folder-card.tsx
@@ -245,6 +260,11 @@ msgstr "{0, plural, one {Hemos encontrado # campo en tu documento.} other {Hemos
 #: apps/remix/app/components/dialogs/ai-recipient-detection-dialog.tsx
 msgid "{0, plural, one {We found # recipient in your document.} other {We found # recipients in your document.}}"
 msgstr "{0, plural, one {Hemos encontrado # destinatario en tu documento.} other {Hemos encontrado # destinatarios en tu documento.}}"
+
+#. placeholder {0}: envelopeIds.length
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "{0, plural, one {You are about to cancel the selected document.} other {You are about to cancel # documents.}}"
+msgstr ""
 
 #. placeholder {0}: envelopeIds.length
 #: apps/remix/app/components/dialogs/envelopes-bulk-delete-dialog.tsx
@@ -484,6 +504,18 @@ msgid "{user} approved the document"
 msgstr "{user} aprobó el documento"
 
 #: packages/lib/utils/document-audit-logs.ts
+msgid "{user} authenticated with the signing provider"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "{user} authorised the remote signature"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "{user} cancelled the document"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
 msgid "{user} CC'd the document"
 msgstr "{user} envió una copia del documento"
 
@@ -545,6 +577,10 @@ msgstr "{user} reemplazó el PDF del elemento de sobre {0}"
 #: packages/lib/utils/document-audit-logs.ts
 msgid "{user} requested a 2FA token for the document"
 msgstr "{user} solicitó un token 2FA para el documento"
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "{user} requested a remote signature"
+msgstr ""
 
 #. placeholder {0}: data.recipientEmail
 #: packages/lib/utils/document-audit-logs.ts
@@ -617,6 +653,14 @@ msgstr "{user} validó un token 2FA para el documento"
 msgid "{user} viewed the document"
 msgstr "{user} vio el documento"
 
+#: packages/lib/utils/document-audit-logs.ts
+msgid "{user}'s remote signature was applied"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "{user}'s signing provider authentication failed"
+msgstr ""
+
 #: apps/remix/app/components/tables/internal-audit-log-table.tsx
 #: packages/lib/server-only/pdf/render-audit-logs.ts
 msgid "{userAgent}"
@@ -650,8 +694,8 @@ msgid "<0>{organisationName}</0> has requested to create an account on your beha
 msgstr "<0>{organisationName}</0> ha solicitado crear una cuenta en tu nombre."
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
-msgid "<0>{organisationName}</0> has requested to link your current Documenso account to their organisation."
-msgstr "<0>{organisationName}</0> ha solicitado vincular tu cuenta actual de Documenso a su organización."
+msgid "<0>{organisationName}</0> has requested to link your current Artha Sign account to their organisation."
+msgstr "<0>{organisationName}</0> ha solicitado vincular tu cuenta actual de Artha Sign a su organización."
 
 #: apps/remix/app/components/general/document-signing/document-signing-page-view-v1.tsx
 msgid "<0>{senderName} {senderEmail}</0> has invited you to approve this document"
@@ -690,8 +734,8 @@ msgid "<0>{senderName} {senderEmail}</0> on behalf of \"{0}\" has invited you to
 msgstr "<0>{senderName} {senderEmail}</0>, en nombre de \"{0}\", te ha invitado a ver este documento"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "<0>{teamName}</0> has requested to use your email address for their team on Documenso."
-msgstr "<0>{teamName}</0> ha solicitado usar tu dirección de correo electrónico para su equipo en Documenso."
+msgid "<0>{teamName}</0> has requested to use your email address for their team on Artha Sign."
+msgstr "<0>{teamName}</0> ha solicitado usar tu dirección de correo electrónico para su equipo en Artha Sign."
 
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
 msgid "<0>Account management:</0> Modify your account settings, permissions, and preferences"
@@ -949,8 +993,8 @@ msgid "A means to print or download documents for your records"
 msgstr "Un medio para imprimir o descargar documentos para sus registros"
 
 #: packages/email/templates/organisation-join.tsx
-msgid "A member has joined your organisation on Documenso"
-msgstr "Un miembro se ha unido a tu organización en Documenso"
+msgid "A member has joined your organisation on Artha Sign"
+msgstr "Un miembro se ha unido a tu organización en Artha Sign"
 
 #: packages/lib/jobs/definitions/emails/send-organisation-member-left-email.handler.ts
 msgid "A member has left your organisation"
@@ -961,8 +1005,8 @@ msgid "A member has left your organisation {organisationName}"
 msgstr "Un miembro ha dejado tu organización {organisationName}"
 
 #: packages/email/templates/organisation-leave.tsx
-msgid "A member has left your organisation on Documenso"
-msgstr "Un miembro ha dejado tu organización en Documenso"
+msgid "A member has left your organisation on Artha Sign"
+msgstr "Un miembro ha dejado tu organización en Artha Sign"
 
 #: packages/lib/jobs/definitions/emails/send-organisation-member-joined-email.handler.ts
 msgid "A new member has joined your organisation"
@@ -1001,18 +1045,18 @@ msgid "A request has been made to create an account for you"
 msgstr "Se ha hecho una solicitud para crear una cuenta para ti"
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
-msgid "A request has been made to link your Documenso account"
-msgstr "Se ha hecho una solicitud para vincular tu cuenta de Documenso"
+msgid "A request has been made to link your Artha Sign account"
+msgstr "Se ha hecho una solicitud para vincular tu cuenta de Artha Sign"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Documenso"
-msgstr "Se ha iniciado una solicitud para usar tu correo electrónico por {0} en Documenso"
+msgid "A request to use your email has been initiated by {0} on Artha Sign"
+msgstr "Se ha iniciado una solicitud para usar tu correo electrónico por {0} en Artha Sign"
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso."
-msgstr "Un secreto que se enviará a tu URL para que puedas verificar que la solicitud ha sido enviada por Documenso."
+msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Artha Sign."
+msgstr "Un secreto que se enviará a tu URL para que puedas verificar que la solicitud ha sido enviada por Artha Sign."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "A stable internet connection"
@@ -1059,12 +1103,12 @@ msgid "Accept & Link Account"
 msgstr "Aceptar y Vincular Cuenta"
 
 #: packages/email/templates/organisation-invite.tsx
-msgid "Accept invitation to join an organisation on Documenso"
-msgstr "Aceptar invitación para unirse a una organización en Documenso"
+msgid "Accept invitation to join an organisation on Artha Sign"
+msgstr "Aceptar invitación para unirse a una organización en Artha Sign"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "Accept team email request for {teamName} on Documenso"
-msgstr "Aceptar la solicitud de correo electrónico del equipo para {teamName} en Documenso"
+msgid "Accept team email request for {teamName} on Artha Sign"
+msgstr "Aceptar la solicitud de correo electrónico del equipo para {teamName} en Artha Sign"
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "Acceptance and Consent"
@@ -1255,6 +1299,14 @@ msgstr "Agregue un ID externo al documento. Esto se puede usar para identificar 
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 msgid "Add an external ID to the template. This can be used to identify in external systems."
 msgstr "Agregue un ID externo a la plantilla. Esto se puede usar para identificar en sistemas externos."
+
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "Add an optional reason for cancelling these documents"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+msgid "Add an optional reason for cancelling this document"
+msgstr ""
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-upload-page.tsx
 msgid "Add and configure multiple documents"
@@ -1632,8 +1684,8 @@ msgid "An admin has deleted your document \"{documentName}\"."
 msgstr "Un administrador ha eliminado tu documento \"{documentName}\"."
 
 #: packages/email/template-components/template-admin-user-created.tsx
-msgid "An administrator has created a Documenso account for you."
-msgstr "Un administrador ha creado una cuenta de Documenso para ti."
+msgid "An administrator has created a Artha Sign account for you."
+msgstr "Un administrador ha creado una cuenta de Artha Sign para ti."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "An electronic signature provided by you on our platform, achieved through clicking through to a document and entering your name, or any other electronic signing method we provide, is legally binding. It carries the same weight and enforceability as a manual signature written with ink on paper."
@@ -1713,6 +1765,10 @@ msgstr "Ocurrió un error al guardar automáticamente la configuración de la pl
 #: apps/remix/app/components/general/document-signing/document-signing-auto-sign.tsx
 msgid "An error occurred while auto-signing the document, some fields may not be signed. Please review and manually sign any remaining fields."
 msgstr "Se produjo un error al firmar automáticamente el documento, es posible que algunos campos no estén firmados. Por favor, revise y firme manualmente cualquier campo restante."
+
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "An error occurred while cancelling the documents."
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-form.tsx
 msgid "An error occurred while completing the document. Please try again."
@@ -1857,6 +1913,14 @@ msgstr "Ocurrió un error al subir tu documento."
 msgid "An error occurred. Please try again later."
 msgstr "Ocurrió un error. Por favor intenta de nuevo más tarde."
 
+#: packages/lib/jobs/definitions/emails/send-organisation-limit-alert-email.handler.ts
+msgid "An organisation has exceeded their fair use limits"
+msgstr ""
+
+#: packages/lib/jobs/definitions/emails/send-organisation-limit-alert-email.handler.ts
+msgid "An organisation is nearing their fair use limits"
+msgstr ""
+
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
 msgid "An organisation wants to create an account for you. Please review the details below."
 msgstr "Una organización quiere crear una cuenta para ti. Por favor, revisa los detalles a continuación."
@@ -1981,9 +2045,27 @@ msgstr "Las solicitudes a la API se han pausado temporalmente."
 msgid "API Tokens"
 msgstr "Tokens de API"
 
+#: apps/remix/app/components/general/organisations/organisation-quota-banner.tsx
+msgid "API usage is approaching fair use limits"
+msgstr ""
+
 #: apps/remix/app/routes/_authenticated+/admin+/stats.tsx
 msgid "App Version"
 msgstr "Versión de la Aplicación"
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-signing-in-progress-page.tsx
+msgid "Applying your signature"
+msgstr ""
+
+#: apps/remix/app/components/general/organisations/organisation-quota-banner.tsx
+msgid "Approaching fair use limit"
+msgstr ""
+
+#: packages/email/templates/organisation-limit-alert.tsx
+#: packages/email/templates/organisation-limit-alert.tsx
+#: packages/lib/jobs/definitions/emails/send-organisation-limit-alert-email.handler.ts
+msgid "Approaching Your Plan Limits"
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-complete-dialog.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-complete-dialog.tsx
@@ -2070,6 +2152,7 @@ msgstr "¿Está seguro de que desea eliminar esta organización?"
 msgid "Are you sure you wish to delete this team?"
 msgstr "¿Estás seguro de que deseas eliminar este equipo?"
 
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-delete-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-item-delete-dialog.tsx
 #: apps/remix/app/components/dialogs/organisation-email-delete-dialog.tsx
@@ -2089,6 +2172,14 @@ msgstr "¿Estás seguro de que deseas eliminar este equipo?"
 #: apps/remix/app/routes/_authenticated+/settings+/security.linked-accounts.tsx
 msgid "Are you sure?"
 msgstr "¿Estás seguro?"
+
+#: apps/remix/app/components/general/admin-license-card.tsx
+msgid "Artha Sign License"
+msgstr "Licencia de Artha Sign"
+
+#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
+msgid "Artha Sign will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
+msgstr "Artha Sign eliminará <0>todos sus documentos</0>, junto con todos sus documentos completados, firmas y todos los demás recursos de su cuenta."
 
 #: apps/remix/app/components/tables/organisation-groups-table.tsx
 msgid "Assigned Teams"
@@ -2437,8 +2528,8 @@ msgid "By enabling 2FA, you will be required to enter a code from your authentic
 msgstr "Al habilitar 2FA, se te requerirá ingresar un código de tu aplicación de autenticación cada vez que inicies sesión usando email y contraseña."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "By proceeding to use the electronic signature service provided by Documenso, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
-msgstr "Al continuar utilizando el servicio de firma electrónica proporcionado por Documenso, usted afirma que ha leído y entendido esta divulgación. Acepta todos los términos y condiciones relacionados con el uso de firmas electrónicas y transacciones electrónicas según lo detallado aquí."
+msgid "By proceeding to use the electronic signature service provided by Artha Sign, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
+msgstr "Al continuar utilizando el servicio de firma electrónica proporcionado por Artha Sign, usted afirma que ha leído y entendido esta divulgación. Acepta todos los términos y condiciones relacionados con el uso de firmas electrónicas y transacciones electrónicas según lo detallado aquí."
 
 #: apps/remix/app/components/general/document-signing/document-signing-disclosure.tsx
 msgid "By proceeding with your electronic signature, you acknowledge and consent that it will be used to sign the given document and holds the same legal validity as a handwritten signature. By completing the electronic signing process, you affirm your understanding and acceptance of these conditions."
@@ -2480,6 +2571,7 @@ msgstr "¿No puedes encontrar a alguien?"
 #: apps/remix/app/components/dialogs/email-transport-delete-dialog.tsx
 #: apps/remix/app/components/dialogs/email-transport-send-test-dialog.tsx
 #: apps/remix/app/components/dialogs/email-transport-update-dialog.tsx
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-delete-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-distribute-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-duplicate-dialog.tsx
@@ -2488,6 +2580,7 @@ msgstr "¿No puedes encontrar a alguien?"
 #: apps/remix/app/components/dialogs/envelope-redistribute-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-rename-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-save-as-template-dialog.tsx
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
 #: apps/remix/app/components/dialogs/envelopes-bulk-delete-dialog.tsx
 #: apps/remix/app/components/dialogs/envelopes-bulk-move-dialog.tsx
 #: apps/remix/app/components/dialogs/folder-create-dialog.tsx
@@ -2559,6 +2652,8 @@ msgstr "¿No puedes encontrar a alguien?"
 #: apps/remix/app/components/general/document/embedded-editor-attachment-popover.tsx
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
 #: apps/remix/app/components/general/teams/team-email-usage.tsx
+#: apps/remix/app/components/tables/documents-table-action-dropdown.tsx
+#: apps/remix/app/components/tables/envelopes-table-bulk-action-bar.tsx
 #: apps/remix/app/components/tables/settings-security-passkey-table-actions.tsx
 #: apps/remix/app/components/tables/settings-security-passkey-table-actions.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains.$id.tsx
@@ -2568,6 +2663,24 @@ msgstr "¿No puedes encontrar a alguien?"
 #: packages/ui/primitives/signature-pad/signature-pad-dialog.tsx
 msgid "Cancel"
 msgstr "Cancelar"
+
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+msgid "Cancel document"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "Cancel documents"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "Cancel Documents"
+msgstr ""
+
+#: apps/remix/app/components/general/document/document-status.tsx
+#: apps/remix/app/components/general/envelope-editor/envelope-editor-header.tsx
+#: packages/lib/constants/document.ts
+msgid "Cancelled"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/passkey-create-dialog.tsx
 msgid "Cancelled by user"
@@ -4048,14 +4161,6 @@ msgstr "Registros DKIM generados. Por favor, añade los registros DNS para verif
 msgid "DNS Records"
 msgstr "Registros DNS"
 
-#: apps/remix/app/components/general/admin-license-card.tsx
-msgid "Documenso License"
-msgstr "Licencia de Documenso"
-
-#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
-msgid "Documenso will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
-msgstr "Documenso eliminará <0>todos sus documentos</0>, junto con todos sus documentos completados, firmas y todos los demás recursos de su cuenta."
-
 #: apps/remix/app/components/general/settings-nav-desktop.tsx
 #: apps/remix/app/components/general/template/template-page-view-documents-table.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings._layout.tsx
@@ -4107,6 +4212,16 @@ msgstr "Documentar Todo"
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "Document Approved"
 msgstr "Documento Aprobado"
+
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+#: apps/remix/app/components/general/document/document-status.tsx
+msgid "Document cancelled"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgctxt "Audit log format"
+msgid "Document cancelled"
+msgstr ""
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
@@ -4403,6 +4518,10 @@ msgstr "La carga de documentos está deshabilitada debido a facturas impagadas"
 msgid "Document uploaded"
 msgstr "Documento subido"
 
+#: apps/remix/app/components/general/organisations/organisation-quota-banner.tsx
+msgid "Document usage is approaching fair use limits"
+msgstr ""
+
 #: packages/lib/utils/document-audit-logs.ts
 msgctxt "Audit log format"
 msgid "Document viewed"
@@ -4463,6 +4582,10 @@ msgstr "Documentos"
 msgid "Documents and resources related to this envelope."
 msgstr "Documentos y recursos relacionados con este sobre."
 
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "Documents cancelled"
+msgstr ""
+
 #: apps/remix/app/components/tables/organisation-insights-table.tsx
 #: apps/remix/app/components/tables/organisation-insights-table.tsx
 msgid "Documents Completed"
@@ -4479,6 +4602,10 @@ msgstr "Documentos creados a partir de la plantilla"
 #: apps/remix/app/components/dialogs/envelopes-bulk-delete-dialog.tsx
 msgid "Documents deleted"
 msgstr "Documentos eliminados"
+
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "Documents partially cancelled"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/envelopes-bulk-delete-dialog.tsx
 msgid "Documents partially deleted"
@@ -4964,6 +5091,10 @@ msgstr "Transporte de correo electrónico"
 msgid "Email Transports"
 msgstr "Transportes de correo electrónico"
 
+#: apps/remix/app/components/general/organisations/organisation-quota-banner.tsx
+msgid "Email usage is approaching fair use limits"
+msgstr ""
+
 #: apps/remix/app/components/general/document-signing/access-auth-2fa-form.tsx
 msgid "Email verification"
 msgstr "Verificación de Correo Electrónico"
@@ -5266,6 +5397,7 @@ msgstr "Sobre actualizado"
 #: apps/remix/app/components/dialogs/document-move-to-folder-dialog.tsx
 #: apps/remix/app/components/dialogs/document-move-to-folder-dialog.tsx
 #: apps/remix/app/components/dialogs/document-move-to-folder-dialog.tsx
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
 #: apps/remix/app/components/dialogs/envelopes-bulk-delete-dialog.tsx
 #: apps/remix/app/components/dialogs/session-logout-all-dialog.tsx
 #: apps/remix/app/components/dialogs/template-bulk-send-dialog.tsx
@@ -6180,6 +6312,10 @@ msgstr "Si no deseas usar el autenticador solicitado, puedes cerrarlo, lo que mo
 msgid "If you don't find the confirmation link in your inbox, you can request a new one below."
 msgstr "Si no encuentras el enlace de confirmación en tu bandeja de entrada, puedes solicitar uno nuevo a continuación."
 
+#: packages/email/templates/organisation-limit-alert.tsx
+msgid "If you expect to need higher limits, please contact support at {SUPPORT_EMAIL} and we will review your account."
+msgstr ""
+
 #: apps/remix/app/components/forms/2fa/enable-authenticator-app-dialog.tsx
 msgid "If your authenticator app does not support QR codes, you can use the following code instead:"
 msgstr "Si tu aplicación de autenticación no admite códigos QR, puedes usar el siguiente código en su lugar:"
@@ -6331,8 +6467,8 @@ msgid "Invalid License Key"
 msgstr "Clave de licencia no válida"
 
 #: apps/remix/app/components/general/admin-license-status-banner.tsx
-msgid "Invalid License Type - Your Documenso instance is using features that are not part of your license."
-msgstr "Tipo de licencia no válido: tu instancia de Documenso está usando funciones que no forman parte de tu licencia."
+msgid "Invalid License Type - Your Artha Sign instance is using features that are not part of your license."
+msgstr "Tipo de licencia no válido: tu instancia de Artha Sign está usando funciones que no forman parte de tu licencia."
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Invalid link"
@@ -6466,8 +6602,8 @@ msgid "Japanese"
 msgstr "Japonés"
 
 #: packages/email/templates/organisation-invite.tsx
-msgid "Join {organisationName} on Documenso"
-msgstr "Únete a {organisationName} en Documenso"
+msgid "Join {organisationName} on Artha Sign"
+msgstr "Únete a {organisationName} en Artha Sign"
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.support.tsx
 msgid "Join our community on <0>Discord</0> for community support and discussion."
@@ -6675,8 +6811,8 @@ msgid "Link template"
 msgstr "Vincular plantilla"
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
-msgid "Link your Documenso account"
-msgstr "Vincula tu cuenta de Documenso"
+msgid "Link your Artha Sign account"
+msgstr "Vincula tu cuenta de Artha Sign"
 
 #: apps/remix/app/routes/_authenticated+/settings+/security._index.tsx
 #: apps/remix/app/routes/_authenticated+/settings+/security.linked-accounts.tsx
@@ -7040,8 +7176,8 @@ msgid "Min"
 msgstr "Mín"
 
 #: apps/remix/app/components/general/admin-license-status-banner.tsx
-msgid "Missing License - Your Documenso instance is using features that require a license."
-msgstr "Licencia faltante: tu instancia de Documenso está usando funciones que requieren una licencia."
+msgid "Missing License - Your Artha Sign instance is using features that require a license."
+msgstr "Licencia faltante: tu instancia de Artha Sign está usando funciones que requieren una licencia."
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-fields-page.tsx
 msgid "Missing Recipients"
@@ -7417,6 +7553,10 @@ msgstr "No se encontraron resultados."
 msgid "No signature field found"
 msgstr "No se encontró campo de firma"
 
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
+msgid "No signing credentials available"
+msgstr ""
+
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
 msgid "No Stripe customer attached"
 msgstr "No hay cliente de Stripe adjunto"
@@ -7492,6 +7632,10 @@ msgid "Not supported"
 msgstr "No soportado"
 
 #: apps/remix/app/components/tables/documents-table-empty-state.tsx
+msgid "Nothing cancelled"
+msgstr ""
+
+#: apps/remix/app/components/tables/documents-table-empty-state.tsx
 #: apps/remix/app/components/tables/documents-table-empty-state.tsx
 msgid "Nothing to do"
 msgstr "Nada que hacer"
@@ -7553,7 +7697,9 @@ msgstr "En esta página, puedes crear y gestionar tokens de API. Consulta nuestr
 msgid "On this page, you can create new Webhooks and manage the existing ones."
 msgstr "En esta página, puedes editar el webhook y sus configuraciones."
 
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-delete-dialog.tsx
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
 #: apps/remix/app/components/dialogs/envelopes-bulk-delete-dialog.tsx
 msgid "Once confirmed, the following will occur:"
 msgstr "Una vez confirmado, ocurrirá lo siguiente:"
@@ -7593,6 +7739,10 @@ msgstr "Solo se puede cargar un archivo a la vez"
 #: packages/ui/lib/handle-dropzone-rejection.tsx
 msgid "Only PDF files are allowed"
 msgstr "Solo se permiten archivos PDF"
+
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "Only pending documents you have permission to manage will be cancelled."
+msgstr ""
 
 #: apps/remix/app/components/general/generic-error-layout.tsx
 #: apps/remix/app/components/general/generic-error-layout.tsx
@@ -7728,9 +7878,9 @@ msgstr "Nombre de la Organización"
 msgid "Organisation not found"
 msgstr "Organización no encontrada"
 
-#: packages/email/templates/organisation-limit-exceeded.tsx
-#: packages/email/templates/organisation-limit-exceeded.tsx
-#: packages/lib/jobs/definitions/emails/send-organisation-limit-exceeded-email.handler.ts
+#: packages/email/templates/organisation-limit-alert.tsx
+#: packages/email/templates/organisation-limit-alert.tsx
+#: packages/lib/jobs/definitions/emails/send-organisation-limit-alert-email.handler.ts
 msgid "Organisation Review Required"
 msgstr "Revisión de la organización requerida"
 
@@ -8172,7 +8322,7 @@ msgstr "Por favor confirma tu dirección de correo electrónico"
 msgid "Please contact <0>support</0> if you have any questions."
 msgstr "Comunícate con el <0>soporte</0> si tienes alguna pregunta."
 
-#: packages/email/templates/organisation-limit-exceeded.tsx
+#: packages/email/templates/organisation-limit-alert.tsx
 msgid "Please contact support at {SUPPORT_EMAIL} and we will review your account."
 msgstr "Ponte en contacto con soporte en {SUPPORT_EMAIL} y revisaremos tu cuenta."
 
@@ -8183,6 +8333,10 @@ msgstr "Por favor, contacta al soporte si deseas revertir esta acción."
 #: apps/remix/app/components/embed/multisign/multi-sign-document-list.tsx
 msgid "Please contact the site owner for further assistance."
 msgstr "Por favor, contacte al propietario del sitio para más asistencia."
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-signing-in-progress-page.tsx
+msgid "Please don't close this tab. The signing provider is finalising your signature."
+msgstr ""
 
 #: apps/remix/app/components/forms/token.tsx
 msgid "Please enter a meaningful name for your token. This will help you identify it later."
@@ -8528,8 +8682,8 @@ msgid "Read Only"
 msgstr "Solo lectura"
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.support.tsx
-msgid "Read our documentation to get started with Documenso."
-msgstr "Lea nuestra documentación para comenzar con Documenso."
+msgid "Read our documentation to get started with Artha Sign."
+msgstr "Lea nuestra documentación para comenzar con Artha Sign."
 
 #: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
 msgid "Read Status"
@@ -8553,6 +8707,11 @@ msgstr "Listo"
 msgid "Reason"
 msgstr "Razón"
 
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "Reason (optional)"
+msgstr ""
+
 #: packages/email/template-components/template-document-cancel.tsx
 msgid "Reason for cancellation: {cancellationReason}"
 msgstr "Razón de cancelación: {cancellationReason}"
@@ -8572,6 +8731,10 @@ msgstr "Reason must be less than 500 characters"
 #: apps/remix/app/components/general/document-signing/document-signing-auth-dialog.tsx
 msgid "Reauthentication is required to sign this field"
 msgstr "Se requiere reautenticación para firmar este campo"
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-signing-in-progress-page.tsx
+msgid "Reauthorise and retry"
+msgstr ""
 
 #: packages/ui/components/recipient/recipient-role-select.tsx
 msgid "Receives copy"
@@ -8615,6 +8778,14 @@ msgid "Recipient approved the document"
 msgstr "El destinatario aprobó el documento"
 
 #: packages/lib/utils/document-audit-logs.ts
+msgid "Recipient authenticated with the signing provider"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Recipient authorised the remote signature"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
 msgid "Recipient CC'd the document"
 msgstr "El destinatario envió una copia del documento"
 
@@ -8656,6 +8827,10 @@ msgstr "Correo electrónico de destinatario eliminado"
 msgid "Recipient requested a 2FA token for the document"
 msgstr "El destinatario solicitó un token 2FA para el documento"
 
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Recipient requested a remote signature"
+msgstr ""
+
 #: apps/remix/app/components/general/admin-global-settings-section.tsx
 msgid "Recipient signed"
 msgstr "Destinatario firmó"
@@ -8693,6 +8868,14 @@ msgstr "El destinatario validó un token 2FA para el documento"
 msgid "Recipient viewed the document"
 msgstr "El destinatario vio el documento"
 
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Recipient's remote signature was applied"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Recipient's signing provider authentication failed"
+msgstr ""
+
 #: apps/remix/app/components/embed/authoring/configure-document-recipients.tsx
 #: apps/remix/app/components/general/document/document-page-view-recipients.tsx
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-recipient-form.tsx
@@ -8715,6 +8898,11 @@ msgstr "Destinatarios que se agregarán automáticamente a los nuevos documentos
 #: apps/remix/app/components/dialogs/envelope-distribute-dialog.tsx
 msgid "Recipients will be able to sign the document once sent"
 msgstr "Los destinatarios podrán firmar el documento una vez enviado"
+
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "Recipients will be notified that the document was cancelled"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/envelope-delete-dialog.tsx
 msgid "Recipients will still retain their copy of the document"
@@ -9129,8 +9317,8 @@ msgid "Return Home"
 msgstr "Volver al inicio"
 
 #: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "Return to Documenso sign in page here"
-msgstr "Regrese a la página de inicio de sesión de Documenso aquí"
+msgid "Return to Artha Sign sign in page here"
+msgstr "Regrese a la página de inicio de sesión de Artha Sign aquí"
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor.tsx
 msgid "Return to documents"
@@ -9689,8 +9877,8 @@ msgid "Set up your template properties and recipient information"
 msgstr "Configura las propiedades de tu plantilla y la información del destinatario"
 
 #: packages/email/templates/admin-user-created.tsx
-msgid "Set your password for Documenso"
-msgstr "Establece tu contraseña para Documenso"
+msgid "Set your password for Artha Sign"
+msgstr "Establece tu contraseña para Artha Sign"
 
 #: apps/remix/app/components/general/app-command-menu.tsx
 #: apps/remix/app/components/general/app-command-menu.tsx
@@ -9810,8 +9998,8 @@ msgid "Sign Document"
 msgstr "Firmar Documento"
 
 #: apps/remix/app/routes/_recipient+/_layout.tsx
-msgid "Sign Document - Documenso"
-msgstr "Firmar documento - Documenso"
+msgid "Sign Document - Artha Sign"
+msgstr "Firmar documento - Artha Sign"
 
 #: apps/remix/app/components/embed/multisign/multi-sign-document-list.tsx
 msgid "Sign Documents"
@@ -9965,10 +10153,18 @@ msgctxt "Recipient role progressive verb"
 msgid "Signing"
 msgstr "Firmando"
 
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
+msgid "Signing algorithm is not supported"
+msgstr ""
+
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: packages/lib/server-only/pdf/render-certificate.ts
 msgid "Signing Certificate"
 msgstr "Certificado de Firma"
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
+msgid "Signing certificate is invalid"
+msgstr ""
 
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: packages/lib/server-only/pdf/render-certificate.ts
@@ -9983,6 +10179,10 @@ msgstr "¡Firma completa!"
 #: apps/remix/app/routes/_recipient+/sign.$token+/expired.tsx
 msgid "Signing Deadline Expired"
 msgstr "Fecha límite de firma vencida"
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-signing-in-progress-page.tsx
+msgid "Signing failed"
+msgstr ""
 
 #: apps/remix/app/components/embed/embed-document-signing-page-v1.tsx
 msgid "Signing for"
@@ -10063,6 +10263,7 @@ msgstr "Omitir"
 msgid "Some signers have not been assigned a signature field. Please assign at least 1 signature field to each signer before proceeding."
 msgstr "Algunos firmantes no han sido asignados a un campo de firma. Asigne al menos 1 campo de firma a cada firmante antes de continuar."
 
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-delete-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-download-dialog.tsx
 #: apps/remix/app/components/dialogs/envelope-duplicate-dialog.tsx
@@ -10110,6 +10311,10 @@ msgstr "Algunos firmantes no han sido asignados a un campo de firma. Asigne al m
 msgid "Something went wrong"
 msgstr "Algo salió mal"
 
+#: apps/remix/app/components/general/document-signing/csc-recipient-signing-in-progress-page.tsx
+msgid "Something went wrong while applying your signature. Please retry."
+msgstr ""
+
 #. placeholder {0}: data.teamName
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Something went wrong while attempting to verify your email address for <0>{0}</0>. Please try again later."
@@ -10130,6 +10335,10 @@ msgstr "Algo salió mal al cargar el documento."
 #: apps/remix/app/components/general/document-signing/document-signing-auth-passkey.tsx
 msgid "Something went wrong while loading your passkeys."
 msgstr "Algo salió mal al cargar tus claves de acceso."
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
+msgid "Something went wrong while preparing the remote signature. Please try again."
+msgstr ""
 
 #: packages/lib/constants/pdf-viewer-i18n.ts
 msgid "Something went wrong while rendering the document, please try again or contact our support."
@@ -10470,8 +10679,8 @@ msgstr "Equipo"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Documenso"
-msgstr "El equipo \"{0}\" ha sido eliminado en Documenso"
+msgid "Team \"{0}\" has been deleted on Artha Sign"
+msgstr "El equipo \"{0}\" ha sido eliminado en Artha Sign"
 
 #: packages/lib/constants/teams-translations.ts
 msgid "Team Admin"
@@ -10522,8 +10731,8 @@ msgid "Team email removed"
 msgstr "Correo electrónico del equipo eliminado"
 
 #: packages/email/templates/team-email-removed.tsx
-msgid "Team email removed for {teamName} on Documenso"
-msgstr "Correo electrónico del equipo eliminado para {teamName} en Documenso"
+msgid "Team email removed for {teamName} on Artha Sign"
+msgstr "Correo electrónico del equipo eliminado para {teamName} en Artha Sign"
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Team email verification"
@@ -10829,8 +11038,8 @@ msgid "Thank you for letting us know, we have flagged this sender for review. If
 msgstr "Gracias por informarnos; hemos marcado a este remitente para revisión. Si tienes alguna duda, no dudes en ponerte en contacto con nuestro <0>equipo de soporte</0>."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Thank you for using Documenso to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
-msgstr "Gracias por usar Documenso para realizar su firma electrónica de documentos. El propósito de esta divulgación es informarle sobre el proceso, la legalidad y sus derechos con respecto al uso de firmas electrónicas en nuestra plataforma. Al optar por usar una firma electrónica, usted está aceptando los términos y condiciones descritos a continuación."
+msgid "Thank you for using Artha Sign to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
+msgstr "Gracias por usar Artha Sign para realizar su firma electrónica de documentos. El propósito de esta divulgación es informarle sobre el proceso, la legalidad y sus derechos con respecto al uso de firmas electrónicas en nuestra plataforma. Al optar por usar una firma electrónica, usted está aceptando los términos y condiciones descritos a continuación."
 
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "That's okay, it happens! Click the button below to reset your password."
@@ -10923,6 +11132,11 @@ msgctxt "Audit log format"
 msgid "The document ownership was delegated to {0} on behalf of {1}"
 msgstr "La propiedad del documento se delegó a {0} en nombre de {1}"
 
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "The document signing process will be stopped"
+msgstr ""
+
 #: apps/remix/app/utils/toast-error-messages.ts
 msgid "The document was created but could not be sent to recipients."
 msgstr "El documento fue creado pero no se pudo enviar a los destinatarios."
@@ -10934,6 +11148,10 @@ msgstr "El documento será ocultado de tu cuenta"
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
 msgid "The document will be immediately sent to recipients if this is checked."
 msgstr "El documento se enviará inmediatamente a los destinatarios si esto está marcado."
+
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+msgid "The document will remain in your dashboard marked as Cancelled"
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._layout.tsx
 msgid "The document you are looking for could not be found."
@@ -10947,6 +11165,10 @@ msgstr "El documento que estás buscando puede haber sido eliminado, renombrado 
 #: packages/ui/components/document/document-send-email-message-helper.tsx
 msgid "The document's name"
 msgstr "El nombre del documento"
+
+#: apps/remix/app/components/dialogs/envelopes-bulk-cancel-dialog.tsx
+msgid "The documents will remain in your dashboard marked as Cancelled"
+msgstr ""
 
 #: apps/remix/app/components/forms/email-preferences-form.tsx
 msgid "The email address which will show up in the \"Reply To\" field in emails"
@@ -11148,6 +11370,10 @@ msgstr "La fecha límite de firma de este documento ha pasado. Ponte en contacto
 msgid "The signing link has been copied to your clipboard."
 msgstr "El enlace de firma ha sido copiado a tu portapapeles."
 
+#: apps/remix/app/components/general/document-signing/csc-recipient-signing-in-progress-page.tsx
+msgid "The signing provider did not respond in time. Please retry."
+msgstr ""
+
 #: packages/email/templates/recipient-expired.tsx
 msgid "The signing window for \"{recipientName}\" on document \"{documentName}\" has expired."
 msgstr "La ventana de firma para \"{recipientName}\" en el documento \"{documentName}\" ha vencido."
@@ -11225,8 +11451,8 @@ msgstr "Los tipos de firmas que los destinatarios pueden usar al firmar el docum
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
-msgid "The URL for Documenso to send webhook events to."
-msgstr "La URL para Documenso para enviar eventos de webhook."
+msgid "The URL for Artha Sign to send webhook events to."
+msgstr "La URL para Artha Sign para enviar eventos de webhook."
 
 #: apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx
 msgid "The user you are looking for may have been removed, renamed or may have never existed."
@@ -11263,6 +11489,10 @@ msgstr "Luego repetir cada"
 #: apps/remix/app/components/tables/documents-table-empty-state.tsx
 msgid "There are no active drafts at the current moment. You can upload a document to start drafting."
 msgstr "No hay borradores activos en este momento. Puedes subir un documento para comenzar a redactar."
+
+#: apps/remix/app/components/tables/documents-table-empty-state.tsx
+msgid "There are no cancelled documents. Documents you cancel will remain here as a record that they were distributed."
+msgstr ""
 
 #: apps/remix/app/components/tables/documents-table-empty-state.tsx
 msgid "There are no completed documents yet. Documents that you have created or received will appear here once completed."
@@ -11329,6 +11559,10 @@ msgstr "Este documento no se puede recuperar, si deseas impugnar la razón para 
 msgid "This document cannot be changed"
 msgstr "Este documento no se puede cambiar"
 
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+msgid "This document could not be cancelled at this time. Please try again."
+msgstr ""
+
 #: apps/remix/app/components/dialogs/envelope-delete-dialog.tsx
 msgid "This document could not be deleted at this time. Please try again."
 msgstr "Este documento no se pudo eliminar en este momento. Por favor, inténtalo de nuevo."
@@ -11349,6 +11583,10 @@ msgstr "Este documento no se pudo guardar como plantilla en este momento. Por fa
 #: packages/ui/primitives/recipient-selector.tsx
 msgid "This document has already been sent to this recipient. You can no longer edit this recipient."
 msgstr "Este documento ya ha sido enviado a este destinatario. Ya no puede editar a este destinatario."
+
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._index.tsx
+msgid "This document has been cancelled"
+msgstr ""
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "This document has been cancelled by the owner and is no longer available for others to sign."
@@ -11372,8 +11610,8 @@ msgid "This document has too many recipients. Please remove some recipients or c
 msgstr "Este documento tiene demasiados destinatarios. Elimina algunos destinatarios o contacta con el soporte si necesitas más."
 
 #: apps/remix/app/components/general/document/document-certificate-qr-view.tsx
-msgid "This document is available in your Documenso account. You can view more details, recipients, and audit logs there."
-msgstr "Este documento está disponible en tu cuenta de Documenso. Puedes ver más detalles, destinatarios y registros de auditoría allí."
+msgid "This document is available in your Artha Sign account. You can view more details, recipients, and audit logs there."
+msgstr "Este documento está disponible en tu cuenta de Artha Sign. Puedes ver más detalles, destinatarios y registros de auditoría allí."
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._index.tsx
 msgid "This document is currently a draft and has not been sent"
@@ -11392,8 +11630,8 @@ msgid "This document was created using a direct link."
 msgstr "Este documento fue creado usando un enlace directo."
 
 #: packages/email/template-components/template-footer.tsx
-msgid "This document was sent using <0>Documenso</0>."
-msgstr "Este documento fue enviado usando <0>Documenso</0>."
+msgid "This document was sent using <0>Artha Sign</0>."
+msgstr "Este documento fue enviado usando <0>Artha Sign</0>."
 
 #: apps/remix/app/components/dialogs/envelope-duplicate-dialog.tsx
 msgid "This document will be duplicated."
@@ -11876,6 +12114,7 @@ msgstr "Desencadenadores"
 #: apps/remix/app/components/dialogs/ai-field-detection-dialog.tsx
 #: apps/remix/app/components/dialogs/ai-recipient-detection-dialog.tsx
 #: apps/remix/app/components/dialogs/ai-recipient-detection-dialog.tsx
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
 msgid "Try again"
 msgstr "Intentar de nuevo"
 
@@ -12028,6 +12267,10 @@ msgstr "No se pudo configurar la autenticación de dos factores"
 msgid "Unable to sign in"
 msgstr "No se pudo iniciar sesión"
 
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
+msgid "Unable to start the signing flow"
+msgstr ""
+
 #: apps/remix/app/components/general/document-signing/document-signing-auth-2fa.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-auth-passkey.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-auth-password.tsx
@@ -12122,6 +12365,7 @@ msgstr "Grupo sin título"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains.$id.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups.$id.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
+#: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
 msgid "Update"
@@ -12621,6 +12865,7 @@ msgstr "Ver documento"
 #: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
+#: packages/ui/primitives/document-flow/add-subject.tsx
 msgid "View Document"
 msgstr "Ver Documento"
 
@@ -12747,8 +12992,8 @@ msgstr "Esperando tu turno"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
-msgid "Want to send slick signing links like this one? <0>Check out Documenso</0>."
-msgstr "¿Quieres enviar enlaces de firma tan elegantes como este? <0>Prueba Documenso</0>."
+msgid "Want to send slick signing links like this one? <0>Check out Artha Sign</0>."
+msgstr "¿Quieres enviar enlaces de firma tan elegantes como este? <0>Prueba Artha Sign</0>."
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Want your own public profile?"
@@ -13140,15 +13385,15 @@ msgstr "Aún estamos esperando a que otros firmantes firmen este documento.<0/>T
 msgid "We've changed your password as you asked. You can now sign in with your new password."
 msgstr "Hemos cambiado tu contraseña como solicitaste. Ahora puedes iniciar sesión con tu nueva contraseña."
 
-#: packages/email/templates/organisation-limit-exceeded.tsx
+#: packages/email/templates/organisation-limit-alert.tsx
 msgid "We've noticed API activity on your account that exceeds the fair use limits of your current plan. As a precaution, new API activity has been temporarily paused pending review."
 msgstr "Hemos detectado actividad de la API en tu cuenta que excede los límites de uso razonable de tu plan actual. Como medida de precaución, la nueva actividad de la API se ha pausado temporalmente a la espera de una revisión."
 
-#: packages/email/templates/organisation-limit-exceeded.tsx
+#: packages/email/templates/organisation-limit-alert.tsx
 msgid "We've noticed document activity on your account that exceeds the fair use limits of your current plan. As a precaution, new document activity has been temporarily paused pending review."
 msgstr "Hemos detectado actividad de documentos en tu cuenta que excede los límites de uso razonable de tu plan actual. Como medida de precaución, la nueva actividad de documentos se ha pausado temporalmente a la espera de una revisión."
 
-#: packages/email/templates/organisation-limit-exceeded.tsx
+#: packages/email/templates/organisation-limit-alert.tsx
 msgid "We've noticed email sending activity on your account that exceeds the fair use limits of your current plan. As a precaution, new email activity has been temporarily paused pending review."
 msgstr "Hemos detectado actividad de envío de correos electrónicos en tu cuenta que excede los límites de uso razonable de tu plan actual. Como medida de precaución, la nueva actividad de correos electrónicos se ha pausado temporalmente a la espera de una revisión."
 
@@ -13220,13 +13465,13 @@ msgid "Welcome to {organisationName}"
 msgstr "Bienvenido a {organisationName}"
 
 #: packages/lib/jobs/definitions/emails/send-admin-user-created-email.handler.ts
-msgid "Welcome to Documenso"
-msgstr "Bienvenido a Documenso"
+msgid "Welcome to Artha Sign"
+msgstr "Bienvenido a Artha Sign"
 
 #: packages/email/template-components/template-admin-user-created.tsx
 #: packages/email/template-components/template-confirmation-email.tsx
-msgid "Welcome to Documenso!"
-msgstr "¡Bienvenido a Documenso!"
+msgid "Welcome to Artha Sign!"
+msgstr "¡Bienvenido a Artha Sign!"
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "Well-known URL is required"
@@ -13268,8 +13513,8 @@ msgid "Whether to enable the SSO portal for your organisation"
 msgstr "Si desea habilitar el portal de SSO para su organización"
 
 #: apps/remix/app/routes/_profile+/p.$url.tsx
-msgid "While waiting for them to do so you can create your own Documenso account and get started with document signing right away."
-msgstr "Mientras esperas a que ellos lo hagan, puedes crear tu propia cuenta de Documenso y comenzar a firmar documentos de inmediato."
+msgid "While waiting for them to do so you can create your own Artha Sign account and get started with document signing right away."
+msgstr "Mientras esperas a que ellos lo hagan, puedes crear tu propia cuenta de Artha Sign y comenzar a firmar documentos de inmediato."
 
 #: apps/remix/app/components/dialogs/organisation-create-dialog.tsx
 msgid "Whitelabeling, unlimited members and more"
@@ -13322,6 +13567,10 @@ msgstr "Has agregado un destinatario"
 #: packages/lib/utils/document-audit-logs.ts
 msgid "You approved the document"
 msgstr "Has aprobado el documento"
+
+#: apps/remix/app/components/dialogs/envelope-cancel-dialog.tsx
+msgid "You are about to cancel <0>\"{title}\"</0>"
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-complete-dialog.tsx
 msgid "You are about to complete approving the following document"
@@ -13502,6 +13751,14 @@ msgstr "No estás autorizado para habilitar a este usuario."
 msgid "You are not authorized to reset two factor authentcation for this user."
 msgstr "No está autorizado para restablecer la autenticación de dos factores para este usuario."
 
+#: packages/lib/utils/document-audit-logs.ts
+msgid "You authenticated with the signing provider"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "You authorised the remote signature"
+msgstr ""
+
 #: apps/remix/app/components/dialogs/ai-field-detection-dialog.tsx
 msgid "You can add fields manually in the editor."
 msgstr "Puedes agregar campos manualmente en el editor."
@@ -13540,8 +13797,8 @@ msgid "You can only detect fields in draft envelopes"
 msgstr "Solo puedes detectar campos en sobres en borrador"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "You can revoke access at any time in your team settings on Documenso <0>here</0>."
-msgstr "Puedes revocar el acceso en cualquier momento en la configuración de tu equipo en Documenso <0>aquí</0>."
+msgid "You can revoke access at any time in your team settings on Artha Sign <0>here</0>."
+msgstr "Puedes revocar el acceso en cualquier momento en la configuración de tu equipo en Artha Sign <0>aquí</0>."
 
 #: apps/remix/app/components/forms/public-profile-form.tsx
 msgid "You can update the profile URL by updating the team URL in the general settings page."
@@ -13562,6 +13819,10 @@ msgstr "Puedes ver los documentos creados en tu panel de control bajo la secció
 #: packages/email/template-components/template-document-rejected.tsx
 msgid "You can view the document and its status by clicking the button below."
 msgstr "Puede ver el documento y su estado haciendo clic en el botón de abajo."
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "You cancelled the document"
+msgstr ""
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-recipient-form.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
@@ -13683,8 +13944,8 @@ msgstr "Has sido invitado por <0>{0}</0> para unirte a su organización."
 
 #. placeholder {0}: organisation.name
 #: packages/lib/server-only/organisation/create-organisation-member-invites.ts
-msgid "You have been invited to join {0} on Documenso"
-msgstr "Te han invitado a unirte a {0} en Documenso"
+msgid "You have been invited to join {0} on Artha Sign"
+msgstr "Te han invitado a unirte a {0} en Artha Sign"
 
 #: packages/email/templates/organisation-invite.tsx
 msgid "You have been invited to join the following organisation"
@@ -13973,6 +14234,10 @@ msgstr "Has reemplazado el PDF del elemento del sobre {0}"
 msgid "You requested a 2FA token for the document"
 msgstr "Has solicitado un token 2FA para el documento"
 
+#: packages/lib/utils/document-audit-logs.ts
+msgid "You requested a remote signature"
+msgstr ""
+
 #. placeholder {0}: data.recipientEmail
 #: packages/lib/utils/document-audit-logs.ts
 msgid "You resent an email to {0}"
@@ -14235,12 +14500,12 @@ msgid "Your Email"
 msgstr "Tu correo electrónico"
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has already been confirmed. You can now use all features of Documenso."
-msgstr "Tu correo electrónico ya ha sido confirmado. Ahora puedes usar todas las funciones de Documenso."
+msgid "Your email has already been confirmed. You can now use all features of Artha Sign."
+msgstr "Tu correo electrónico ya ha sido confirmado. Ahora puedes usar todas las funciones de Artha Sign."
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has been successfully confirmed! You can now use all features of Documenso."
-msgstr "¡Tu correo electrónico ha sido confirmado con éxito! Ahora puedes usar todas las funciones de Documenso."
+msgid "Your email has been successfully confirmed! You can now use all features of Artha Sign."
+msgstr "¡Tu correo electrónico ha sido confirmado con éxito! Ahora puedes usar todas las funciones de Artha Sign."
 
 #. placeholder {0}: teamEmail.team.name
 #. placeholder {1}: teamEmail.team.url
@@ -14303,17 +14568,37 @@ msgstr "Tu organización ha superado el límite de uso razonable. Ponte en conta
 msgid "Your organisation has reached its plan's fair use limit. Please contact your organisation administrator or support to continue."
 msgstr "Tu organización ha alcanzado el límite de uso razonable de su plan. Ponte en contacto con el administrador de tu organización o con el soporte para continuar."
 
-#: packages/email/templates/organisation-limit-exceeded.tsx
+#: apps/remix/app/components/general/organisations/organisation-quota-banner.tsx
+msgid "Your organisation is approaching a fair use limit"
+msgstr ""
+
+#: apps/remix/app/components/general/organisations/organisation-quota-banner.tsx
+msgid "Your organisation is approaching a fair use limit. If you expect to need higher limits, please contact <0>support</0> to review your plan's limits."
+msgstr ""
+
+#: packages/email/templates/organisation-limit-alert.tsx
 msgid "Your organisation is generating API requests faster than normal, so some requests are being temporarily throttled."
 msgstr "Tu organización está generando solicitudes de API más rápido de lo normal, por lo que algunas solicitudes se están limitando temporalmente."
 
-#: packages/email/templates/organisation-limit-exceeded.tsx
+#: packages/email/templates/organisation-limit-alert.tsx
 msgid "Your organisation is generating documents faster than normal, so some requests are being temporarily throttled."
 msgstr "Tu organización está generando documentos más rápido de lo normal, por lo que algunas solicitudes se están limitando temporalmente."
 
-#: packages/email/templates/organisation-limit-exceeded.tsx
+#: packages/email/templates/organisation-limit-alert.tsx
 msgid "Your organisation is generating emails faster than normal, so some requests are being temporarily throttled."
 msgstr "Tu organización está generando correos electrónicos más rápido de lo normal, por lo que algunas solicitudes se están limitando temporalmente."
+
+#: packages/email/templates/organisation-limit-alert.tsx
+msgid "Your organisation is nearing its fair use limits for creating documents on your current plan. Once the limit is reached, new document activity will be temporarily paused."
+msgstr ""
+
+#: packages/email/templates/organisation-limit-alert.tsx
+msgid "Your organisation is nearing its fair use limits for making API requests on your current plan. Once the limit is reached, new API activity will be temporarily paused."
+msgstr ""
+
+#: packages/email/templates/organisation-limit-alert.tsx
+msgid "Your organisation is nearing its fair use limits for sending email on your current plan. Once the limit is reached, new email activity will be temporarily paused."
+msgstr ""
 
 #: apps/remix/app/components/forms/password.tsx
 #: apps/remix/app/components/forms/reset-password.tsx
@@ -14337,8 +14622,8 @@ msgid "Your plan does not support inviting members. Please upgrade or your plan 
 msgstr "Tu plan no soporta invitar miembros. Por favor, actualiza tu plan o contacta con ventas en <0>{SUPPORT_EMAIL}</0> si deseas hablar sobre tus opciones."
 
 #: apps/remix/app/components/general/organisations/organisation-billing-banner.tsx
-msgid "Your plan is no longer valid. Please subscribe to a new plan to continue using Documenso."
-msgstr "Tu plan ya no es válido. Por favor, suscríbete a un nuevo plan para continuar usando Documenso."
+msgid "Your plan is no longer valid. Please subscribe to a new plan to continue using Artha Sign."
+msgstr "Tu plan ya no es válido. Por favor, suscríbete a un nuevo plan para continuar usando Artha Sign."
 
 #: apps/remix/app/components/forms/profile.tsx
 msgid "Your profile has been updated successfully."
@@ -14360,6 +14645,30 @@ msgstr "Tu código de recuperación ha sido copiado en tu portapapeles."
 #: apps/remix/app/components/forms/2fa/view-recovery-codes-dialog.tsx
 msgid "Your recovery codes are listed below. Please store them in a safe place."
 msgstr "Tus códigos de recuperación se enumeran a continuación. Por favor, guárdalos en un lugar seguro."
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Your remote signature was applied"
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-signing-in-progress-page.tsx
+msgid "Your signing authorisation expired before the signature could be applied. Please reauthorise to retry."
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
+msgid "Your signing certificate is invalid, expired, or missing a required key. Contact your administrator or signing provider for assistance."
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Your signing provider authentication failed"
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
+msgid "Your signing provider does not advertise a signing algorithm this document accepts. Contact your administrator or signing provider for assistance."
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/csc-recipient-blocked-page.tsx
+msgid "Your signing provider returned no usable credentials for this account. Contact your administrator or signing provider for assistance."
+msgstr ""
 
 #: apps/remix/app/components/embed/embed-recipient-expired.tsx
 msgid "Your signing window for this document has expired. Please contact the sender for a new invitation."
@@ -14438,4 +14747,3 @@ msgstr "Su código de verificación:"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "your-domain.com another-domain.com"
 msgstr "su-dominio.com otro-dominio.com"
-

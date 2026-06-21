@@ -103,7 +103,7 @@ test('[SIGNING_BRANDING]: V2 signing renders custom logo as a plain image', asyn
   await expectPlainBrandingLogo(page, `${team.name}'s Logo`);
 });
 
-test('[SIGNING_BRANDING]: V2 signing keeps internal link for the Documenso fallback logo', async ({ page }) => {
+test('[SIGNING_BRANDING]: V2 signing keeps internal link for the Artha Sign fallback logo', async ({ page }) => {
   const { user, team } = await seedUser();
 
   const { recipients } = await seedPendingDocumentWithFullFields({

@@ -21,7 +21,7 @@ export const ZNameSchema = z
   });
 
 export const IDENTITY_PROVIDER_NAME: Record<string, string> = {
-  DOCUMENSO: 'Documenso',
+  DOCUMENSO: 'Artha Sign',
   GOOGLE: 'Google',
   MICROSOFT: 'Microsoft',
   OIDC: 'OIDC',

@@ -89,7 +89,7 @@ test.describe('AutoSave Signers Step - Templates', () => {
 
     await addSignerAndSave(page);
 
-    await page.getByPlaceholder('Name').fill('Documenso Manager');
+    await page.getByPlaceholder('Name').fill('Artha Sign Manager');
     await page.getByPlaceholder('Email').fill('manager@documenso.com');
 
     await triggerAutosave(page);
@@ -108,7 +108,7 @@ test.describe('AutoSave Signers Step - Templates', () => {
 
       expect(retrievedRecipients.length).toBe(1);
       expect(retrievedRecipients[0].email).toBe('manager@documenso.com');
-      expect(retrievedRecipients[0].name).toBe('Documenso Manager');
+      expect(retrievedRecipients[0].name).toBe('Artha Sign Manager');
       expect(retrievedRecipients[0].role).toBe('CC');
     }).toPass();
   });
